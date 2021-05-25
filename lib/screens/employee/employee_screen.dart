@@ -1,7 +1,9 @@
 import 'package:assessment_one/constants.dart';
+import 'package:assessment_one/providers/home_provider.dart';
 import 'package:assessment_one/screens/employee/create_employee_screen.dart';
 import 'package:assessment_one/screens/employee/edit_employee_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:provider/provider.dart';
 
 class EmployeeScreen extends StatefulWidget {
   static const routeName = "EmployeeScreen";
@@ -11,6 +13,11 @@ class EmployeeScreen extends StatefulWidget {
 }
 
 class _EmployeeScreenState extends State<EmployeeScreen> {
+  @override
+  void initState() {
+
+    super.initState();
+  }
   @override
   Widget build(BuildContext context) {
     return Scaffold(

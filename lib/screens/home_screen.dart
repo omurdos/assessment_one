@@ -16,7 +16,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Home"),
+        title: Text(context.watch<HomeProvider>().title),
       ),
       drawer: Drawer(
         child: ListView(
@@ -29,8 +29,10 @@ class _HomeScreenState extends State<HomeScreen> {
             ),
             ListTile(
               title: Text("Employees"),
+              leading: Icon(Icons.group),
               selected:  context.read<HomeProvider>().selectedScreen == Screens.EMPLOYEE,
               onTap: () {
+                context.read<HomeProvider>().title = "Employees";
                 Navigator.pop(context);
                 context.read<HomeProvider>().selectedScreen = Screens.EMPLOYEE;
               },
@@ -38,8 +40,10 @@ class _HomeScreenState extends State<HomeScreen> {
             Divider(),
             ListTile(
               title: Text("Projects"),
+              leading: Icon(Icons.task_alt_rounded),
               selected:  context.read<HomeProvider>().selectedScreen == Screens.PROJECT,
               onTap: () {
+                context.read<HomeProvider>().title = "Projects";
                 Navigator.pop(context);
                 context.read<HomeProvider>().selectedScreen = Screens.PROJECT;
               },

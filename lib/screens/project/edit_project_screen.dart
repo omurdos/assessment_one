@@ -11,10 +11,11 @@ class EditProjectScreen extends StatefulWidget {
 }
 
 class _EditProjectScreenState extends State<EditProjectScreen> {
-  bool checkBox1 = false;
-  bool checkBox2 = false;
-  bool checkBox3 = false;
-  bool checkBox4 = false;
+  bool isIOS = false;
+  bool isAndroid = false;
+  bool isLinux = false;
+  bool isMacOS = false;
+  bool isWindows = false;
 
   TextEditingController startDateController = TextEditingController();
   TextEditingController endDateController = TextEditingController();
@@ -151,10 +152,10 @@ class _EditProjectScreenState extends State<EditProjectScreen> {
                     children: [
                       CheckboxListTile(
                         title: Text("iOS"),
-                        value: checkBox1,
+                        value: isIOS,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isIOS = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -162,10 +163,10 @@ class _EditProjectScreenState extends State<EditProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("Android"),
-                        value: checkBox1,
+                        value: isAndroid,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isAndroid = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -173,10 +174,10 @@ class _EditProjectScreenState extends State<EditProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("Linux"),
-                        value: checkBox1,
+                        value: isLinux,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isLinux = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -184,10 +185,10 @@ class _EditProjectScreenState extends State<EditProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("MacOS"),
-                        value: checkBox1,
+                        value: isMacOS,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isMacOS = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -195,10 +196,10 @@ class _EditProjectScreenState extends State<EditProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("Windows"),
-                        value: checkBox1,
+                        value: isWindows,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isWindows = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -215,14 +216,12 @@ class _EditProjectScreenState extends State<EditProjectScreen> {
                   ),
                   Container(
                     height: 130,
-                    child: ListView(
+                    child: ListView.builder(
                       scrollDirection: Axis.horizontal,
-                      children: [
-                        ProjectEmployeeItem(),
-                        ProjectEmployeeItem(),
-                        ProjectEmployeeItem(),
-                        ProjectEmployeeItem(),
-                      ],
+                      itemCount: 10,
+                      itemBuilder: (context, position) {
+                        return ProjectEmployeeItem();
+                      },
                     ),
                   ),
                   SizedBox(

@@ -10,6 +10,15 @@ class HomeProvider extends BaseProvider {
 
   List<Widget> get screens => _screens;
 
+  String _title = "Home";
+
+  String get title => _title;
+
+  set title(String value) {
+    _title = value;
+    notifyListeners();
+  }
+
   Screens get selectedScreen => _selectedScreen;
 
   set selectedScreen(Screens value) {

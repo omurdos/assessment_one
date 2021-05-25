@@ -1,5 +1,6 @@
 import 'package:assessment_one/constants.dart';
 import 'package:assessment_one/providers/employee_provider.dart';
+import 'package:assessment_one/widgets/document_item.dart';
 import 'package:assessment_one/widgets/titled_divider.dart';
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
@@ -155,42 +156,12 @@ class _EditEmployeeScreenState extends State<EditEmployeeScreen> {
                 ),
                 Container(
                   height: 150,
-                  child: ListView(
+                  child: ListView.builder(
                     scrollDirection: Axis.horizontal,
-                    children: [
-                      Container(
-                        child: Icon(
-                          Icons.note,
-                          size: 50,
-                        ),
-                        height: 140,
-                        width: 100,
-                      ),
-                      Container(
-                        child: Icon(
-                          Icons.note,
-                          size: 50,
-                        ),
-                        height: 140,
-                        width: 100,
-                      ),
-                      Container(
-                        child: Icon(
-                          Icons.note,
-                          size: 50,
-                        ),
-                        height: 140,
-                        width: 100,
-                      ),
-                      Container(
-                        child: Icon(
-                          Icons.note,
-                          size: 50,
-                        ),
-                        height: 140,
-                        width: 100,
-                      ),
-                    ],
+                    itemCount: 10,
+                    itemBuilder: (context, position) {
+                      return DocumentItem();
+                    },
                   ),
                 ),
                 SizedBox(

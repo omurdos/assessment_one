@@ -14,10 +14,11 @@ class CreateProjectScreen extends StatefulWidget {
 }
 
 class _CreateProjectScreenState extends State<CreateProjectScreen> {
-  bool checkBox1 = false;
-  bool checkBox2 = false;
-  bool checkBox3 = false;
-  bool checkBox4 = false;
+  bool isIOS = false;
+  bool isAndroid = false;
+  bool isLinux = false;
+  bool isMacOS = false;
+  bool isWindows = false;
 
   TextEditingController startDateController = TextEditingController();
   TextEditingController endDateController = TextEditingController();
@@ -30,15 +31,15 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
   @override
   void initState() {
     super.initState();
-    projectModel = Provider.of<ProjectProvider>(context, listen: false).selectedProjectModel;
-    if(projectModel == null){
-
-    }else{
+    projectModel = Provider.of<ProjectProvider>(context, listen: false)
+        .selectedProjectModel;
+    if (projectModel == null) {
+    } else {
       populate();
     }
   }
 
-  populate() async{
+  populate() async {
     //TODO: Implement a one form for edit and create
   }
 
@@ -171,10 +172,10 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                     children: [
                       CheckboxListTile(
                         title: Text("iOS"),
-                        value: checkBox1,
+                        value: isIOS,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isIOS = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -182,10 +183,10 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("Android"),
-                        value: checkBox1,
+                        value: isAndroid,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isAndroid = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -193,10 +194,10 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("Linux"),
-                        value: checkBox1,
+                        value: isLinux,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isLinux = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -204,10 +205,10 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("MacOS"),
-                        value: checkBox1,
+                        value: isMacOS,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isMacOS = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
@@ -215,10 +216,10 @@ class _CreateProjectScreenState extends State<CreateProjectScreen> {
                       ),
                       CheckboxListTile(
                         title: Text("Windows"),
-                        value: checkBox1,
+                        value: isWindows,
                         onChanged: (newValue) {
                           setState(() {
-                            checkBox1 = newValue ?? false;
+                            isWindows = newValue ?? false;
                           });
                         },
                         controlAffinity: ListTileControlAffinity
