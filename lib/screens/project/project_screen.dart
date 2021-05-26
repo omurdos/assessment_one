@@ -20,14 +20,6 @@ class _ProjectScreenState extends State<ProjectScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      // appBar: AppBar(
-      //   title: Text("Projects"),
-      //   actions: [
-      //     IconButton(onPressed: (){
-      //       Navigator.pushNamed(context, CreateProjectScreen.routeName);
-      //     }, icon: Icon(Icons.add))
-      //   ],
-      // ),
       body: ListView(
         padding: EdgeInsets.symmetric(
             horizontal: kDefaultLayoutPadding, vertical: 10),

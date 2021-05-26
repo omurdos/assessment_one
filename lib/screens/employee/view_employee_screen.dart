@@ -203,12 +203,4 @@ class _ViewEmployeeScreenState extends State<ViewEmployeeScreen> {
       ),
     );
   }
-
-  showFiles() {
-    showModalBottomSheet(
-        context: context,
-        builder: (context) {
-          return EmployeeDocumentsScreen();
-        });
-  }
 }
