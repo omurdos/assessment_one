@@ -25,4 +25,7 @@ class HomeProvider extends BaseProvider {
     _selectedScreen = value;
     notifyListeners();
   }
+  onBottomNavTap(int index){
+    selectedScreen = Screens.values[index];
+  }
 }

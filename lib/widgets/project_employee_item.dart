@@ -6,7 +6,7 @@ class ProjectEmployeeItem extends StatelessWidget {
   Widget build(BuildContext context) {
     return Container(
       width: 100,
-      margin: EdgeInsets.symmetric(horizontal: kItemSpace),
+      margin: EdgeInsets.all(kItemSpace),
       child: Column(
         children: [
           CircleAvatar(

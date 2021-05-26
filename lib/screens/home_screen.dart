@@ -15,41 +15,26 @@ class _HomeScreenState extends State<HomeScreen> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        title: Text(context.watch<HomeProvider>().title),
-      ),
-      drawer: Drawer(
-        child: ListView(
-          children: [
-            DrawerHeader(
-              child: CircleAvatar(
-                child: Image.asset("assets/images/avatar.png"),
-              ),
-              decoration: BoxDecoration(color: Theme.of(context).primaryColor),
-            ),
-            ListTile(
-              title: Text("Employees"),
-              leading: Icon(Icons.group),
-              selected:  context.read<HomeProvider>().selectedScreen == Screens.EMPLOYEE,
-              onTap: () {
-                context.read<HomeProvider>().title = "Employees";
-                Navigator.pop(context);
-                context.read<HomeProvider>().selectedScreen = Screens.EMPLOYEE;
-              },
-            ),
-            Divider(),
-            ListTile(
-              title: Text("Projects"),
-              leading: Icon(Icons.task_alt_rounded),
-              selected:  context.read<HomeProvider>().selectedScreen == Screens.PROJECT,
-              onTap: () {
-                context.read<HomeProvider>().title = "Projects";
-                Navigator.pop(context);
-                context.read<HomeProvider>().selectedScreen = Screens.PROJECT;
-              },
-            ),
-          ],
-        ),
+      bottomNavigationBar: BottomNavigationBar(
+        type: BottomNavigationBarType.shifting,
+        backgroundColor: Colors.white,
+        items: const <BottomNavigationBarItem>[
+          BottomNavigationBarItem(
+            icon: Icon(Icons.group_outlined),
+            activeIcon: Icon(Icons.group),
+            label: 'Employees',
+          ),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.check_circle_outline),
+            activeIcon: Icon(Icons.check_circle),
+            label: 'Projects',
+          ),
+
+        ],
+        currentIndex: context.watch<HomeProvider>().selectedScreen.index,
+        selectedItemColor: Theme.of(context).accentColor,
+        unselectedItemColor: Colors.grey,
+        onTap: context.read<HomeProvider>().onBottomNavTap,
       ),
       body: SafeArea(
         child: Provider.of<HomeProvider>(context)
