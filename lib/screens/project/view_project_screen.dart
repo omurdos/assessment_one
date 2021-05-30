@@ -273,7 +273,7 @@ class _ViewProjectScreenState extends State<ViewProjectScreen> {
                       height: kItemSpace,
                     ),
                     Container(
-                      height: 130,
+                      height: 150,
                       child: ListView.builder(
                         scrollDirection: Axis.horizontal,
                         itemCount: 10,

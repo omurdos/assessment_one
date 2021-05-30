@@ -16,7 +16,7 @@ class ProjectEmployeeItem extends StatelessWidget {
           SizedBox(
             height: kItemSpace,
           ),
-          Text("Employee name"),
+          Text("Employee name", textAlign: TextAlign.center,),
           SizedBox(
             height: kItemSpace,
           ),
