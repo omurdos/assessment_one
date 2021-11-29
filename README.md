@@ -1,16 +1,22 @@
-# assessment_one
+# Project Mangement
 
-MVP assessment 1
+Assesment Task, building a UI of project managment application.
 
-## Getting Started
+## Screens
+* Users.
+  * Create user.
+  * Update user.
+  * Profile.
+* Projects
+  * Creat project.
+  * Update project.
+  * View Project.
 
-This project is a starting point for a Flutter application.
-
-A few resources to get you started if this is your first Flutter project:
-
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
-
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+## Screenshots
+![users](https://github.com/omurdos/assessment_one/blob/master/screenshots/users.png)
+![user profile](https://github.com/omurdos/assessment_one/blob/master/screenshots/user%20profile%201.png)
+![user profile](https://github.com/omurdos/assessment_one/blob/master/screenshots/user%20profile%202.png)
+![Projects]()
+![Project view]()
+![Project view]()
+![Project view]()
