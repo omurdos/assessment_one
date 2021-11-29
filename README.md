@@ -13,7 +13,7 @@ Assesment Task, building a UI of project managment application.
   * View Project.
 
 ## Screenshots
-![users](https://github.com/omurdos/assessment_one/blob/master/screenshots/users.png =250x)
+![users](https://github.com/omurdos/assessment_one/blob/master/screenshots/users.png)
 ![user profile](https://github.com/omurdos/assessment_one/blob/master/screenshots/user%20profile%201.png)
 ![user profile](https://github.com/omurdos/assessment_one/blob/master/screenshots/user%20profile%202.png)
 ![Projects](https://github.com/omurdos/assessment_one/blob/master/screenshots/projects.png)
